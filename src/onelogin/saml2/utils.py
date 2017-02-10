@@ -211,7 +211,7 @@ class OneLogin_Saml2_Utils(object):
                 private_key = private_key.replace('-----END RSA PRIVATE KEY-----', '')
                 private_key = private_key.replace(' ', '')
                 if heads:
-                    private_key = "-----BEGIN RSA PRIVATE KEY-----\n" + "\n".join(wrap(private_key, 64)) + "\n-----END RSA PRIVATE KEY-----\n"
+                    private_key = "-----BEGIN PRIVATE KEY-----\n" + "\n".join(wrap(private_key, 64)) + "\n-----END PRIVATE KEY-----\n"
         return private_key
 
     @staticmethod
