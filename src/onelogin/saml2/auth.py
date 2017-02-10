@@ -436,7 +436,7 @@ class OneLogin_Saml2_Auth(object):
             )
 
         dsig_ctx = xmlsec.DSigCtx()
-        dsig_ctx.signKey = xmlsec.Key.loadMemory(key, xmlsec.KeyDataFormatPem, None)
+        dsig_ctx.signKey = xmlsec.Key.loadMemory(str(key), xmlsec.KeyDataFormatPem, None)
 
         msg = '%s=%s' % (saml_type, quote_plus(saml_data))
         if relay_state is not None:
